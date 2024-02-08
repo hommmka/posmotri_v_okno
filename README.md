@@ -1,1 +1,1 @@
-https://github.com/hommmka/posmotri_v_okno
+https://github.com/hommmka/posmotri_v_okno.git

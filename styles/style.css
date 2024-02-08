@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -39,24 +42,22 @@ ol {
 
 .content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   max-width: 1140px;
   gap: 30px;
-  padding: 133px 30px;
   align-items: stretch;
+  box-sizing: border-box;
 }
 
 .content__list {
-  max-width: 395px;
+  max-width: 394px;
   max-height: 298px;
   overflow: auto;
   position: relative;
-  text-overflow: ellipsis;
 }
 
 .content__list-item {
   margin: 30px 0px;
+  gap: 30px;
 }
 
 li:not(:last-child) {
@@ -79,7 +80,7 @@ li:not(:last-child) {
 .result__video-container {
   min-width: 711px;
   height: 386px;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  background: url(path-to-image), lightgray 50% / cover no-repeat;
   position: relative;
 }
 
@@ -97,6 +98,7 @@ li:not(:last-child) {
 .content__video-card {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between
 }
 
 .content__video-card-thumbnail {
@@ -106,7 +108,7 @@ li:not(:last-child) {
 
 .content__video-card-description-container {
   text-overflow: ellipsis;
-  min-width: 200px;
+  max-width: 200px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -121,7 +123,7 @@ li:not(:last-child) {
 
 .search-form__fieldset-title {
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -130,7 +132,7 @@ li:not(:last-child) {
 
 .title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -145,7 +147,7 @@ li:not(:last-child) {
 .content__card-link {
   display: block;
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -160,12 +162,15 @@ li:not(:last-child) {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; 
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -212,7 +217,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 .button {
   color: #FFF;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -224,6 +229,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   border: 1px solid #FFF;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 30px;
+  padding: 0px;
 }
 
 .search-form__submit-button {
@@ -232,7 +239,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .more-button {
-  width: 399px;
+  width: 394px;
   height: 34px;
 }
 
@@ -240,18 +247,21 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   width: 225px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
 }
 
 button:focus {
   outline: none;
 }
 
-.search-form__checkbox-list:hover {
+.search-form__label:hover {
   text-decoration-line: underline;
 }
 
@@ -269,11 +279,18 @@ button:focus {
 }
 
 .content__card-link:active {
-  border: 1px solid #FFF;
   background: #545050;
 }
 
-.search-form__checkbox-list:focus {
+.search-form__textfield:active {
+  border: 1px solid #FFF;
+}
+
+.search-form__textfield:focus {
+  border: 1px solid #FFF;
+}
+
+.search-form__label:focus {
   border: 1px solid #FFF;
 }
 
@@ -282,5 +299,18 @@ button:focus {
 }
 
 .content__card-link:focus {
+  border: 1px solid #FFF;
+}
+
+.more-button:active {
+  border: 1px solid #FFF;
+  background: #545050;
+}
+
+.more-button:hover {
+  border: 1px solid #FFF;
+}
+
+.more-button:focus {
   border: 1px solid #FFF;
 }
