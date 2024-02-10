@@ -68,6 +68,7 @@ li:not(:last-child) {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  min-width: 394px;
 }
 
 .result {
@@ -79,13 +80,15 @@ li:not(:last-child) {
 
 .result__video-container {
   min-width: 711px;
-  height: 386px;
-  background: url(path-to-image), lightgray 50% / cover no-repeat;
+  min-height: 386px;
+  background: url(./folder/img.jpg), lightgray 50% / cover no-repeat;
   position: relative;
 }
 
 .result__video {
  width: 100%;
+ height: 100%;
+ object-fit: cover;
 }
 
 .search-form {
@@ -255,6 +258,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
 }
 
 button:focus {
@@ -295,11 +300,11 @@ button:focus {
 }
 
 .search-form__submit-button:focus {
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
 }
 
 .content__card-link:focus {
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
 }
 
 .more-button:active {
@@ -312,5 +317,5 @@ button:focus {
 }
 
 .more-button:focus {
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
 }
